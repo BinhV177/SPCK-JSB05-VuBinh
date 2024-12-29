@@ -1,0 +1,15 @@
+.container {
+    background-color: lightblue;
+}
+h1 {
+    background-color: blue;
+    text-align: left;
+}
+p {
+    background-color: blueviolet;
+    text-align: left
+}
+img {
+    padding: 5px;
+    width: 150px;
+}

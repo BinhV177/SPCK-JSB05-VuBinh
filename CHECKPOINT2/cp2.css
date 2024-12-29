@@ -1,0 +1,73 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header styles */
+.navbar {
+    background-color: #333;
+    padding: 1rem;
+}
+
+.navbar-brand {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    color: white !important;
+}
+
+/* News list styles */
+.news-card {
+    margin-bottom: 2rem;
+    transition: transform 0.3s;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.news-image {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* News detail styles */
+.news-detail-image {
+    max-height: 400px;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Form styles */
+.submit-form {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .news-image {
+        height: 150px;
+    }
+    
+    .news-detail-image {
+        max-height: 300px;
+    }
+    
+    .submit-form {
+        margin: 1rem;
+        padding: 1rem;
+    }
+}
