@@ -21,10 +21,46 @@
     font-size: 1.5rem;
     font-family: sans-serif;
     color: white !important;
+    display: flex;
+    align-items: center;
 }
 
 .nav-link {
     color: white !important;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ffd700 !important; /* Gold color on hover */
+}
+
+.nav-link:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #ffd700;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover:after {
+    width: 100%;
+}
+
+.login-link {
+    background-color: #ffd700;
+    color: #333 !important;
+    padding: 8px 15px !important;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.login-link:hover {
+    background-color: #ffed4a;
+    color: #333 !important;
 }
 
 /* News list styles */
@@ -89,4 +125,21 @@
         margin: 1rem;
         padding: 1rem;
     }
+}
+
+/* Add these new styles */
+.nav-logo {
+    height: 30px;
+    margin-right: 10px;
+}
+
+/* Add these styles for the icons */
+.nav-link i {
+    margin-right: 8px;
+    font-size: 16px;
+}
+
+.login-link i {
+    margin-right: 8px;
+    font-size: 16px;
 }
