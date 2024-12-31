@@ -50,6 +50,19 @@
     width: 100%;
 }
 
+.login-link {
+    background-color: #ffd700;
+    color: #333 !important;
+    padding: 8px 15px !important;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.login-link:hover {
+    background-color: #ffed4a;
+    color: #333 !important;
+}
+
 /* News list styles */
 .news-card {
     margin-bottom: 2rem;
@@ -120,3 +133,7 @@
     font-size: 16px;
 }
 
+.login-link i {
+    margin-right: 8px;
+    font-size: 16px;
+}
