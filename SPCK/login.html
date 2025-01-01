@@ -38,24 +38,27 @@
 
     <script>
         document.getElementById('loginForm').addEventListener('submit', function(event) {
-            event.preventDefault();
+    event.preventDefault();
 
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
-            const errorMessage = document.getElementById('errorMessage');
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    const errorMessage = document.getElementById('errorMessage');
 
-            // Lấy thông tin từ localStorage
-            const registeredEmail = localStorage.getItem('email');
-            const registeredPassword = localStorage.getItem('password');
+    // Lấy danh sách người dùng từ localStorage
+    const users = JSON.parse(localStorage.getItem('users')) || [];
 
-            if (email === registeredEmail && password === registeredPassword) {
-                errorMessage.textContent = ''; // Xóa lỗi nếu thông tin hợp lệ
-                alert('Đăng nhập thành công!');
-                window.location.href = "main.html"; // Chuyển sang trang chính
-            } else {
-                errorMessage.textContent = 'Email hoặc mật khẩu không đúng. Vui lòng thử lại.';
-            }
-        });
+    // Kiểm tra thông tin người dùng
+    const user = users.find(user => user.email === email && user.password === password);
+
+    if (user) {
+        errorMessage.textContent = ''; // Xóa lỗi nếu thông tin hợp lệ
+        alert('Đăng nhập thành công!');
+        window.location.href = "main.html"; // Chuyển sang trang chính
+    } else {
+        errorMessage.textContent = 'Email hoặc mật khẩu không đúng. Vui lòng thử lại.';
+    }
+});
+
     </script>
 </body>
 </html>
